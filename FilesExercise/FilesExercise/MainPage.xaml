@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FilesExercise.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Settings" Clicked="Settings_Clicked"
+                     ></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <Button Text="Rock" Clicked="RockPaperScissors_Clicked" CommandParameter="Rock"></Button>
+        <Button Text="Paper" Clicked="RockPaperScissors_Clicked" CommandParameter="Paper"></Button>
+        <Button Text="Scissors" Clicked="RockPaperScissors_Clicked" CommandParameter="Scissors"></Button>
+        <Frame x:Name="frWinOrLose" BorderColor="DarkGray" HorizontalOptions="Center">
+            <StackLayout>
+                <Label x:Name="lblWinOrLose" HorizontalOptions="Center" Text="Good luck!"></Label>
+                <Label x:Name="lblComputerChoice" HorizontalOptions="Center" TextColor="White" FontSize="Micro"></Label>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="LightGray" BorderColor="DarkGray" HorizontalOptions="Center">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Total wins:"></Label>
+                    <Label x:Name="lblWins" Text="0"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Total losses:"></Label>
+                    <Label x:Name="lblLosses" Text="0"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Total draws:"></Label>
+                    <Label x:Name="lblDraws" Text="0"></Label>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
