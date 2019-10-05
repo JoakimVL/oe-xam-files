@@ -6,14 +6,14 @@
              mc:Ignorable="d"
              x:Class="FilesExercise.MainPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Settings" Clicked="Settings_Clicked"
+        <ToolbarItem Text="Settings" Clicked="Settings_Clicked" IconImageSource="settings.png"
                      ></ToolbarItem>
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        <Button Text="Rock" Clicked="RockPaperScissors_Clicked" CommandParameter="Rock"></Button>
-        <Button Text="Paper" Clicked="RockPaperScissors_Clicked" CommandParameter="Paper"></Button>
-        <Button Text="Scissors" Clicked="RockPaperScissors_Clicked" CommandParameter="Scissors"></Button>
+        <Button Text="Rock" Clicked="RockPaperScissors_Clicked" CommandParameter="Rock" WidthRequest="200" HorizontalOptions="Center"></Button>
+        <Button Text="Paper" Clicked="RockPaperScissors_Clicked" CommandParameter="Paper" WidthRequest="200" HorizontalOptions="Center"></Button>
+        <Button Text="Scissors" Clicked="RockPaperScissors_Clicked" CommandParameter="Scissors" WidthRequest="200" HorizontalOptions="Center"></Button>
         <Frame x:Name="frWinOrLose" BorderColor="DarkGray" HorizontalOptions="Center">
             <StackLayout>
                 <Label x:Name="lblWinOrLose" HorizontalOptions="Center" Text="Good luck!"></Label>

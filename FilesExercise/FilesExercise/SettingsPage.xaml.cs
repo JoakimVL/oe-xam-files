@@ -29,7 +29,7 @@ namespace FilesExercise
                     UserSettings userSettings = JsonConvert.DeserializeObject<UserSettings>(File.ReadAllText(userSettingsPath));
 
                     entUserName.Text = userSettings.UserName;
-                    entAge.Text = userSettings.Age.ToString();
+                    swWeeklyStats.IsToggled = userSettings.ReceiveWeeklyStats;
                     entEmail.Text = userSettings.Email.ToString();
                 }
             }
@@ -48,8 +48,8 @@ namespace FilesExercise
                 UserSettings userSettings = new UserSettings
                 {
                     UserName = entUserName.Text,
-                    Age = int.Parse(entAge.Text),
-                    Email = entEmail.Text
+                    Email = entEmail.Text,
+                    ReceiveWeeklyStats = swWeeklyStats.IsToggled
                 };
 
                 string serializedSettings = JsonConvert.SerializeObject(userSettings);

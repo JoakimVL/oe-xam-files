@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="FilesExercise.SettingsPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked"></ToolbarItem>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="save.png"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
@@ -19,10 +19,8 @@
                    Placeholder="Write your email address here."
                    Keyboard="Email" />
             
-            <Label Text="Age" />
-            <Entry x:Name="entAge"
-                   Placeholder="Tell your age here - if you want to!"
-                   Keyboard="Numeric" />
+            <Label Text="Receive weekly stats" />
+            <Switch x:Name="swWeeklyStats" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
