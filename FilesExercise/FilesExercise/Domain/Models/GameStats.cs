@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FilesExercise.Domain.Models
 {
-    public class GameSettings
+    public class GameStats
     {
         public int Wins { get; set; }
         public int Losses { get; set; }

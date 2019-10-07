@@ -20,7 +20,7 @@ namespace FilesExercise
         private string computerChoice;
         private readonly string[] Choices = new string[] { "Rock", "Paper", "Scissors" };
         private static Random Random;
-        private GameSettings gameSettings;
+        private GameStats gameSettings;
 
 
         public MainPage()
@@ -36,14 +36,14 @@ namespace FilesExercise
                 using(var reader = new StreamReader(gameStatsPath))
                 {
                     string serializedGameStats = reader.ReadToEnd();
-                    gameSettings = JsonConvert.DeserializeObject<GameSettings>(serializedGameStats);
+                    gameSettings = JsonConvert.DeserializeObject<GameStats>(serializedGameStats);
                     UpdateGameStats();
                 }
             }
 
             else
             {
-                gameSettings = new GameSettings();
+                gameSettings = new GameStats();
                 UpdateGameStats();
             }
             
